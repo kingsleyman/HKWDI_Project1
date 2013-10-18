@@ -1,0 +1,65 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tickey</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/89d2409b.main.css">
+</head>
+  <body data-ng-app="tickeyApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+
+      <header>
+        <h1>Tic Tac Toe</h1>
+      </header>
+
+      <div id="container">
+
+        
+
+
+      <div data-ng-view=""></div>
+
+<nav>
+  <ul>
+<li style=""><a data-ng-hide="is_how_to_page" href="/#/how_to">How To Play</a></li>
+<li style=""><a data-ng-hide="is_game_board_page" href="/#/game_board">Play Now</a></li>
+<li style=""><a href="/#/">Home</a></li>
+<li style=""><a data-ng-hide="is_match_player_page" href="/#/match_player">Match Player</a></li>
+</ul>
+</nav>
+
+
+
+      <!-- close container div -->
+      </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+
+
+        <!--
+        <script src="bower_components/angular-localstorage/angular-local-storage.js"></script> -->
+
+
+        <script src="scripts/b4630f26.scripts.js"></script>
+</body>
+</html>

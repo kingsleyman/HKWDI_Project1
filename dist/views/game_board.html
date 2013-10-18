@@ -1,0 +1,46 @@
+<div id="gameboard" ng-app="" ng-controller="GameBoardCtrl">
+
+      <div class="row">
+        <div id="cell1" class="cell" data-ng-click="handleClick(1)"></div>
+        <div id="cell2" class="cell" data-ng-click="handleClick(2)"></div>
+        <div id="cell3" class="cell" data-ng-click="handleClick(3)"></div>
+      </div>
+
+      <!-- Horizontal border -->
+      <div class="hor-border"></div>
+
+      <div class="row">
+        <div id="cell4" class="cell" data-ng-click="handleClick(4)"></div>
+        <div id="cell5" class="cell" data-ng-click="handleClick(5)"></div>
+        <div id="cell6" class="cell" data-ng-click="handleClick(6)"></div>
+      </div>
+
+      <!-- Horizontal border -->
+      <div class="hor-border"></div>
+
+      <div class="row">
+        <div id="cell7" class="cell" data-ng-click="handleClick(7)"></div>
+        <div id="cell8" class="cell" data-ng-click="handleClick(8)"></div>
+        <div id="cell9" class="cell" data-ng-click="handleClick(9)"></div>
+      </div>
+
+</div>
+
+
+
+<!-- Firebase -->
+<div>
+<button data-ng-click="getName()">Name please</button>
+<button data-ng-click="addWinToLeaderBoard()">Add win</button>
+</div>
+
+<!-- Firebase leaderboard -->
+<ul>
+  <li>Leaderboard</li>
+  <li data-ng-repeat="(name, score) in leaderData.name">{{name}}: {{score}}</li>
+</ul>
+
+<!-- Timer -->
+<div>{{minutes}}:{{seconds}}</div>
+<button data-ng-click="startTimer()">Start</button>
+<button data-ng-click="stopTimer()">Start</button>
