@@ -1,46 +1,11 @@
-
-angular.module('tickeyApp', ['firebase'])
-  .config(function ($routeProvider){
-    $routeProvider
-        // .when('/game_board', {
-        //   templateUrl: 'views/game_board.html',
-        //   controller: 'GameBoardCtrl'
-        // })
-        .when('/how_to', {
-          templateUrl: 'views/how_to.html',
-          controller: 'HowToCtrl'
-        })
-         .when('/', {
-          templateUrl: 'views/mainCtrl.html',
-          controller: 'mainCtrl'
-        })
-        .when('/match_player', {
-          templateUrl: 'views/match_player.html',
-          controller: 'MatchPlayerCtrl'
-        })
-
-        // e.g. /gameboard/123/x
-        .when('/game_board/:id/:mySymbol', {
-          templateUrl: 'views/game_board.html',
-          controller: 'GameBoardCtrl'
-        })
-
-        .otherwise ({
-          redirectTo: '/'
-        });
-
-  });
-
-
-
-/*$scope.currentSymbol = "x";
+$scope.currentSymbol = "x";
 $scope.turnNum = 0;
 
   $scope.handleClick = function(location) {
   if ($scope.notOccupied(location)) {
     $scope.makeNextMove(location, $scope.currentSymbol);
 
-    if ($scope.isWinning($scope.currentSymbol)) {
+    if ($scope.isWinning(currentSymbol)) {
       alert( $scope.currentSymbol + " wins!");
       $scope.clearBoard();
 
@@ -76,7 +41,7 @@ $scope.turnNum = 0;
 // <div class="cell">X</div>
   $scope.notOccupied = function(location) {
   $scope.contentAtLocation = document.getElementById("cell" + location).innerHTML;
-  $scope.result = ($scope.contentAtLocation == "");
+  $scope.result = (contentAtLocation == "");
   return $scope.result;
 }
 
@@ -135,9 +100,9 @@ $scope.clearBoard = function() {
     // <div class="cell x">x</div>
     // <div class="cell o">o</div>
     // <div class="cell">x</div>
-    $scope.currentCell.innerHTML = "";
-    $scope.currentCell.classList.remove("x");
-    $scope.currentCell.classList.remove("o");
+    currentCell.innerHTML = "";
+    currentCell.classList.remove("x");
+    currentCell.classList.remove("o");
 
 
   }
@@ -147,7 +112,7 @@ $scope.clearBoard = function() {
 // Lab 2
 $scope.restartGame = function() {
   // setTimeout(function() { clearBoard(); }, 1000);
-  $scope.currentSymbol = "x";
+  currentSymbol = "x";
   $scope.clearBoard();
 }
 
@@ -192,6 +157,31 @@ $scope.swapSymbol = function() {
 
 
 
+
+angular.module('tickeyApp', [])
+  .config(function ($routeProvider){
+    $routeProvider
+        .when('/game_board', {
+          templateUrl: 'views/game_board.html',
+          controller: 'GameBoardCtrl'
+        })
+
+        .when('/how_to', {
+          templateUrl: 'views/how_to.html',
+          controller: 'HowToCtrl'
+        })
+
+         .when('/', {
+          templateUrl: 'views/mainCtrl.html',
+          controller: 'mainCtrl'
+        })
+
+
+        .otherwise ({
+          redirectTo: '/'
+        })
+
+  });
 
 
 

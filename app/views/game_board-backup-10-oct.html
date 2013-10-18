@@ -1,0 +1,32 @@
+<div id="gameboard">
+
+      <div class="row">
+        <div id="cell1" class="cell" onclick="handleClick(1)" data-ng-click="click()"></div>
+        <div id="cell2"  class="cell"  onclick="handleClick(2)"></div>
+        <div id="cell3"  class="cell" onclick="handleClick(3)"></div>
+      </div>
+
+      <!-- Horizontal border -->
+      <div class="hor-border"></div>
+
+      <div class="row">
+        <div id="cell4" class="cell" onclick="handleClick(4)"></div>
+        <div id="cell5"  class="cell" onclick="handleClick(5)"></div>
+        <div id="cell6"  class="cell" onclick="handleClick(6)"></div>
+      </div>
+
+      <!-- Horizontal border -->
+      <div class="hor-border"></div>
+
+      <div class="row">
+        <div id="cell7"  class="cell" onclick="handleClick(7)"></div>
+        <div  id="cell8"  class="cell"  onclick="handleClick(8)"></div>
+        <div id="cell9"  class="cell"  onclick="handleClick(9)"></div>
+      </div>
+
+</div>
+
+
+<div>{{minutes}}:{{seconds}}</div>
+<button data-ng-click="startTimer()">Start</button>
+<button data-ng-click="stopTimer()">Start</button>

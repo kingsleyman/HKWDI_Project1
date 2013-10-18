@@ -1,10 +1,18 @@
 'use strict';
 
-angular.module('TickeyApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('tickeyApp')
+  .controller('mainCtrl', function ($scope, $rootScope) {
+    
+    $scope.name = "Tickety";   
+
+    $rootScope.is_how_to_page = false;
+
+    };
+
   });
+
+  
+  angular.module('newLocalStorageApp')
+  .controller('mainCtrl', function ($scope, localStorageService) {
+   localStorageService.add("names", ["Matt", "peter", "Someone else"]);
+    });

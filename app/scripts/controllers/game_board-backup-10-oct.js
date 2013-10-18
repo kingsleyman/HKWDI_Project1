@@ -1,39 +1,72 @@
+'use strict';
 
-angular.module('tickeyApp', ['firebase'])
-  .config(function ($routeProvider){
-    $routeProvider
-        // .when('/game_board', {
-        //   templateUrl: 'views/game_board.html',
-        //   controller: 'GameBoardCtrl'
-        // })
-        .when('/how_to', {
-          templateUrl: 'views/how_to.html',
-          controller: 'HowToCtrl'
-        })
-         .when('/', {
-          templateUrl: 'views/mainCtrl.html',
-          controller: 'mainCtrl'
-        })
-        .when('/match_player', {
-          templateUrl: 'views/match_player.html',
-          controller: 'MatchPlayerCtrl'
-        })
+angular.module('tickeyApp')
+.controller('GameBoardCtrl', function ($scope, $rootScope) {
+    
+    $scope.name = "Tickety";
+    $rootScope.is_game_board_page = true;
+    $rootScope.is_how_to_page = false;
 
-        // e.g. /gameboard/123/x
-        .when('/game_board/:id/:mySymbol', {
-          templateUrl: 'views/game_board.html',
-          controller: 'GameBoardCtrl'
-        })
 
-        .otherwise ({
-          redirectTo: '/'
-        });
+    
+    
+    $scope.click = function(){
+    alert("I've been clicked!");
+    };
+
+ 
 
   });
 
+/*
 
 
-/*$scope.currentSymbol = "x";
+    $scope.minutes = "00";
+    $scope.seconds = "00";
+
+
+    $scope.startTimer = function() {
+      $scope.seconds = "01"
+
+    };
+
+  $scope.stop = function() {
+      $scope.seconds = "01"
+
+    };
+
+
+
+
+
+
+
+
+//var currentSymbol = "x";
+$scope.currentSymbol ="x"
+
+/* function swapSymbol() {
+  if (currentSymbol == "x") {
+    currentSymbol = "o";
+  } else {
+    currentSymbol = "x";
+  }
+} */
+
+/*
+$scope.swapSymbol = function() {
+	if ($scope.currentSymbol == "x") {
+		$scope.currentSymbol = "o";
+	}
+	else {
+	$scope.currentSymbol = "x";	
+	}
+};
+
+*/
+
+
+$scope.currentSymbol = "x";
 $scope.turnNum = 0;
 
   $scope.handleClick = function(location) {
@@ -161,48 +194,5 @@ $scope.restartGame = function() {
 
   $scope.makeNextMove(randomNumber, currentPlayer);
 }
-
-// Lab 4
-// add Go Back button at gameboard screen
-
-
-/* conversion examples
-var currentSymbol = "x";
-$scope.currentSymbol ="x"
-
-function swapSymbol() {
-  if (currentSymbol == "x") {
-    currentSymbol = "o";
-  } else {
-    currentSymbol = "x";
-  }
-} 
-
-
-$scope.swapSymbol = function() {
-  if ($scope.currentSymbol == "x") {
-    $scope.currentSymbol = "o";
-  }
-  else {
-  $scope.currentSymbol = "x"; 
-  }
-};
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
